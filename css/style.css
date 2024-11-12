@@ -1,0 +1,231 @@
+.navbar-nav .nav-link {
+  position: relative;
+}
+.navbar-nav .nav-link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+.navbar-nav .nav-link.active::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.welcome-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/hero-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.welcome-page h1 {
+  color: white;
+  font-size: 4rem;
+}
+.welcome-page h2 {
+  color: white;
+  font-size: 3rem;
+}
+.progress,
+.progress-stacked {
+  --bs-progress-bg: rgba(13, 110, 253, 0.25);
+}
+.about-heading {
+  position: relative;
+}
+.about-heading::before {
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: #0078ff;
+  position: absolute;
+  top: 110%;
+  left: 0;
+}
+.services-heading {
+  position: relative;
+}
+.services-heading::before {
+  content: "";
+  width: 10%;
+  height: 4px;
+  background-color: #0078ff;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+}
+.service-icon {
+  font-size: 3rem;
+  padding: 1.25rem;
+  margin: 1.25rem;
+  border-radius: 50%;
+  border: 8px solid #0078ff;
+}
+.services-page .container .inner:hover .service-icon {
+  color: white;
+  background-color: #0078ff;
+  border: 8px solid #69a7ee;
+}
+.services-sect-bg {
+  background-image: linear-gradient(
+      rgba(28, 28, 255, 0.7),
+      rgba(30, 30, 255, 0.7)
+    ),
+    url("../images/post-3.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Portfolio-heading {
+  position: relative;
+}
+.Portfolio-heading::before {
+  content: "";
+  width: 10%;
+  height: 4px;
+  background-color: #0078ff;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+}
+.Portfolio-page .portfolio-icon {
+  font-size: 2rem;
+  color: #0078ff;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.Portfolio-page .portfolio-icon:hover {
+  cursor: pointer;
+}
+.Portfolio-page .container .portfolio-section img {
+  transition: 0.9s;
+}
+.Portfolio-page .container .portfolio-section:hover img {
+  scale: 1.2;
+}
+.Portfolio-page .container .portfolio-section .inner {
+  overflow: hidden;
+}
+.Portfolio-page .portfolio-sect-bg {
+  background-image: linear-gradient(
+      rgba(28, 28, 255, 0.7),
+      rgba(30, 30, 255, 0.7)
+    ),
+    url("../images/overlay-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Portfolio-page .portfolio-sect-bg .carousel-inner img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.blog-heading {
+  position: relative;
+}
+.blog-heading::before {
+  content: "";
+  width: 10%;
+  height: 4px;
+  background-color: #0078ff;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+}
+.blog-page .card a {
+  color: black;
+  transition: 0.8s;
+}
+.blog-page .card a:hover {
+  color: #0078ff;
+}
+.blog-page .card-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.my-badge {
+  padding: 0.6rem 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-page .container-fluid {
+  background-image: linear-gradient(
+      rgba(28, 28, 255, 0.7),
+      rgba(30, 30, 255, 0.7)
+    ),
+    url("../images/overlay-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-page .contact-heading {
+  position: relative;
+}
+.contact-page .contact-heading::before {
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: #0078ff;
+  position: absolute;
+  top: 110%;
+  left: 0;
+}
+.contact-page .icons .my-icon {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 50%;
+  border: 3px solid #0078ff;
+  transition: 0.4s;
+}
+.contact-page .icons .my-icon:hover {
+  background-color: #0078ff;
+  border: 3px solid #69a7ee;
+  cursor: pointer;
+}
+.contact-page button:hover{
+  /* border: #b1cef098 3px solid; */
+  box-shadow: #aacef8 3px 3px 3px 2px;
+}
+@media screen and (max-width:991px) {
+  .navbar-toggler-icon{
+    color: white;
+  }
+  .navbar-nav{
+    background-color: white;
+  }
+  .navbar-nav .nav-link{
+    color: black !important; 
+  }
+  .navbar-nav .nav-link:hover{
+    color: #0078ff !important;
+  }
+  .navbar-nav .nav-link.active{
+    color:#0078ff !important;
+  }
+}

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DevFolio</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-black ">
+        <div class="container ">
+            <a class="navbar-brand text-white fs-2" href="#">DevFolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-6 px-1 mx-3" aria-current="page" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6 px-1 mx-3" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6 px-1 mx-3" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6 px-1 mx-3" href="#work">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6 px-1 mx-3" href="#blog">BLOG</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white fs-6 px-1 mx-3" href="#" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            DROP DOWN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                    aria-expanded="false" data-bs-auto-close="outside">Deep Drop Down</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">Deep Drop Down 1</a></li>
+                                    <li><a href="" class="dropdown-item">Deep Drop Down 2</a></li>
+                                    <li><a href="" class="dropdown-item">Deep Drop Down 3</a></li>
+                                    <li><a href="" class="dropdown-item">Deep Drop Down 4</a></li>
+                                    <li><a href="" class="dropdown-item">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
+                            <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
+                            <li><a class="dropdown-item" href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6 px-1 mx-3" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <!-- welcome page -->
+        <div id="home" class="welcome-page min-vh-100 d-flex justify-content-center align-items-center flex-column">
+            <h1 class="text-center">I am Morgan Freeman</h1>
+            <h2 id="typed"></h2>
+        </div>
+        <!-- welcome page -->
+        <!-- about page -->
+        <div id="about" class="about-page">
+            <div class="container my-5 border border-dark-subtle border-top-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="inner">
+                            <div class="row justify-content-between m-4">
+                                <div class="col-md-4">
+                                    <img src="images/testimonial-2.jpg" alt="person1" class="w-100 rounded-2">
+                                </div>
+                                <div class="col-md-7">
+                                    <ul class="list-unstyled my-4">
+                                        <li class="m-3"><b>Name:</b> Morgan Freeman</li>
+                                        <li class="m-3"><b>Profile:</b> full stack developer</li>
+                                        <li class="m-3"><b>Email:</b> contact@example.com</li>
+                                        <li class="m-3"><b>Phone:</b> (617) 557-0089</li>
+                                    </ul>
+                                </div>
+                                <h3 class="py-2 my-3 fs-5">Skill</h3>
+                                <div class="py-2">
+                                    <p>HTML 85%</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p>CSS3 75%</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p>PHP 50%</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p>JAVASCRIPT 90%</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inner">
+                            <h2 class="about-heading py-2 my-4">About me</h2>
+                            <p class="lead text-secondary py-3 ">Curabitur non nulla sit amet nisl tempus convallis quis
+                                ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
+                                sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan
+                                tincidunt.</p>
+                            <p class="lead text-secondary py-2 ">Mauris blandit aliquet elit, eget tincidunt nibh
+                                pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
+                                sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.</p>
+                            <p class="lead text-secondary py-2 ">Nulla porttitor accumsan tincidunt. Quisque velit nisi,
+                                pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris
+                                blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about page -->
+        <!-- Services page -->
+        <div id="services" class="services-page my-4 py-2">
+            <div class="container my-4 py-3">
+                <div class="services-heading text-center my-4 py-2">
+                    <h2 class="fs-1 fw-bolder">SERVICES</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row p-4">
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-regular fa-envelope service-icon"></i>
+                            <h3>Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-regular fa-rectangle-list service-icon"></i>
+                            <h3>Web Development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-solid fa-signal service-icon"></i>
+                            <h3>Photography</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-solid fa-binoculars service-icon"></i>
+                            <h3>Responsive Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-regular fa-sun service-icon"></i>
+                            <h3>Graphic Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <i class="fa-solid fa-calendar-days service-icon"></i>
+                            <h3>Marketing Services</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
+                                fugiat!
+                                Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid services-sect-bg ">
+                <div class="row p-5 ">
+                    <div class="col-md-3 p-2">
+                        <div class="inner text-center text-white py-3 my-3">
+                            <i class="fa-solid fa-check fs-3 p-4 border border-5 rounded-circle m-3"></i>
+                            <p class="fs-3">450</p>
+                            <p>WORKS COMPLETED</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <div class="inner text-center text-white py-3 my-3">
+                            <i class="fa-regular fa-clipboard fs-3 p-4 border border-5 rounded-circle m-3"></i>
+                            <p class="fs-3">25</p>
+                            <p>YEARS OF EXPERIENCE</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <div class="inner text-center text-white py-3 my-3">
+                            <i class="fa-solid fa-user-group fs-3 p-4 border border-5 rounded-circle m-3"></i>
+                            <p class="fs-3">550</p>
+                            <p>TOTAL CLIENTS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <div class="inner text-center text-white py-3 my-3">
+                            <i class="fa-solid fa-certificate fs-3 p-4 border border-5 rounded-circle m-3"></i>
+                            <p class="fs-3">48</p>
+                            <p>AWARD WON</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services page -->
+        <!-- Portfolio page -->
+        <div id="work" class="Portfolio-page my-4 py-2">
+            <div class="container my-4 py-3">
+                <div class="Portfolio-heading text-center my-4 py-2">
+                    <h2 class="fs-1 fw-bolder">PORTFOLIO</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row p-2">
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-4 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-1.jpg" alt="work-1" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Lorem impsum dolor</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-1.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-4 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-2.jpg" alt="work-2" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Loreda Cuno Nere</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-2.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-3.jpg" alt="work-3" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Mavrito Lana Dere</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-3.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-4.jpg" alt="work-4" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Bindo Laro Cado</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-4.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-5.jpg" alt="work-5" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal5">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Studio Lena Mado</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-5.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 portfolio-section">
+                        <div class="inner shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <img src="images/work-6.jpg" alt="work-6" class="w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal6">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column">
+                                    <p class="fs-5 pt-4">Studio Big Bang</p>
+                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2017</p>
+                                </div>
+                                <i
+                                    class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
+                            </div>
+                            <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/work-6.jpg" alt="" class="w-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid portfolio-sect-bg my-3 py-4">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active p-4 text-center text-white">
+                            <img src="images/testimonial-2.jpg" class=" " alt="person1">
+                            <h2 class="py-3">Xavi Alonso</h2>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit
+                                amet,
+                                consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="carousel-item p-4 text-center text-white">
+                            <img src="images/testimonial-4.jpeg" class=" " alt="person2">
+                            <h2 class="py-3">Marta Socrate</h2>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit
+                                amet,
+                                consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators position-static">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Portfolio page -->
+        <!-- Blog page -->
+        <div id="blog" class="blog-page my-4 py-2">
+            <div class="container my-4 py-3">
+                <div class="blog-heading text-center my-4 py-2">
+                    <h2 class="fs-1 fw-bolder">BLOG</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row p-2">
+                    <div class="col-md-4 p-3 my-4">
+                        <div class="inner">
+                            <div class="card">
+                                <img src="images/post-1.jpg" class="card-img-top" alt="post-1">
+                                <div class="card-body position-relative">
+                                    <div class="badge text-bg-primary my-badge">Travel</div>
+                                    <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
+                                            about
+                                            Travel</a></h5>
+                                    <p class="card-text text-secondary">Proin eget tortor risus. Pellentesque in ipsum
+                                        id
+                                        orci porta
+                                        dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="card-img w-75">
+                                            <img src="images/testimonial-2.jpg" alt="person1">
+                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                        </div>
+                                        <div class="d-flex align-items-center w-25">
+                                            <i class="fa-regular fa-clock"></i> 10 min
+                                        </div>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3 my-4">
+                        <div class="inner">
+                            <div class="card">
+                                <img src="images/post-2.jpg" class="card-img-top" alt="post-2">
+                                <div class="card-body position-relative">
+                                    <div class="badge text-bg-primary my-badge">Web Design</div>
+                                    <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
+                                            about
+                                            Travel</a></h5>
+                                    <p class="card-text text-secondary">Proin eget tortor risus. Pellentesque in ipsum
+                                        id
+                                        orci porta
+                                        dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="card-img w-75">
+                                            <img src="images/testimonial-2.jpg" alt="person1">
+                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                        </div>
+                                        <div class="d-flex align-items-center w-25">
+                                            <i class="fa-regular fa-clock"></i> 10 min
+                                        </div>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3 my-4">
+                        <div class="inner">
+                            <div class="card">
+                                <img src="images/post-3.jpg" class="card-img-top" alt="post-3">
+                                <div class="card-body position-relative">
+                                    <div class="badge text-bg-primary my-badge">Web Design</div>
+                                    <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
+                                            about
+                                            Travel</a></h5>
+                                    <p class="card-text text-secondary">Proin eget tortor risus. Pellentesque in ipsum
+                                        id
+                                        orci porta
+                                        dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="card-img w-75">
+                                            <img src="images/testimonial-2.jpg" alt="person1">
+                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                        </div>
+                                        <div class="d-flex align-items-center w-25">
+                                            <i class="fa-regular fa-clock"></i> 10 min
+                                        </div>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Blog page -->
+        <!-- contact page -->
+        <div id="contact" class="contact-page">
+            <div class="container-fluid py-5">
+                <div class="container py-5">
+                    <div class="row bg-body py-3 my-5">
+                        <div class="col-md-6 ">
+                            <div class="inner px-3 m-2">
+                                <h2 class="contact-heading py-2 my-4">Send Message Us</h2>
+                                <form action="">
+                                    <input type="text" class="form-control py-2 my-3 mt-5" placeholder="Your Name"
+                                        name="name" required>
+                                    <input type="email" class="form-control py-2 my-3" placeholder="Your Email"
+                                        name="Email" required>
+                                    <input type="text" class="form-control py-2 my-3" placeholder="Subject"
+                                        name="Subject" required>
+                                    <textarea name="message" class="form-control py-4 my-3 h-100" id=""
+                                        placeholder="message" name="message" required></textarea>
+                                    <button type="button submit"
+                                        class="btn btn-primary d-block col-3 mx-auto my-4 rounded-pill py-2">Send
+                                        Message</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="inner px-3 m-2">
+                                <h2 class="contact-heading py-2 my-4">Get in Touch</h2>
+                                <p class="lead py-2 my-2 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Facilis dolorum dolorem soluta
+                                    quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse
+                                    laboriosam ratione nobis mollitia inventore?</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-location-dot p-2 text-primary"></i> 329 WASHINGTON ST
+                                        BOSTON,
+                                        MA 02108</li>
+                                    <li><i class="fa-solid fa-mobile-screen-button p-2 text-primary"></i> (617) 557-0089
+                                    </li>
+                                    <li><i class="fa-solid fa-envelope p-2 text-primary"></i> contact@example.com</li>
+                                </ul>
+                                <div class="icons">
+                                    <i class="fa-brands fa-facebook my-icon"></i>
+                                    <i class="fa-brands fa-instagram my-icon"></i>
+                                    <i class="fa-brands fa-twitter my-icon"></i>
+                                    <i class="fa-brands fa-linkedin my-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact page -->
+        <div class="container-fluid bg-primary py-4">
+            <div class="row">
+                <div class="col-3 mx-auto text-white text-center">
+                    © Copyright DevFolio. All Rights Reserved Designed by <a href=""
+                        class="text-white text-decoration-none">BootstrapMade</a>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script>
+            var typed = new Typed('#typed', {
+                strings: ["Designer|", "Developer|", "Freelancer|", "Photographer|"],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true
+            });
+        </script>
+</body>
+
+</html>
