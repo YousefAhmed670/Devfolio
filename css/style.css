@@ -1,6 +1,75 @@
+:root {
+  --clr-primary: #0078ff;
+  --clr-primary-light: #69a7ee;
+  --clr-dark: #0c1b33;
+  --clr-muted: #728197;
+  --clr-surface: #ffffff;
+  --clr-hero-overlay: rgba(0, 0, 0, 0.65);
+  --section-bg: #f5f7fb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--section-bg);
+  color: var(--clr-dark);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-heading p {
+  color: var(--clr-muted);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #81c7ff, #0078ff);
+  color: transparent;
+}
+
+.btn-pill {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.75rem;
+}
+
+.shadow-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.shadow-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12);
+}
+
 .navbar-nav .nav-link {
   position: relative;
 }
+
 .navbar-nav .nav-link::before {
   content: "";
   width: 0;
@@ -11,9 +80,11 @@
   left: 0;
   transition: 0.5s;
 }
+
 .navbar-nav .nav-link:hover::before {
   width: 100%;
 }
+
 .navbar-nav .nav-link.active::before {
   content: "";
   width: 100%;
@@ -23,29 +94,60 @@
   top: 100%;
   left: 0;
 }
+
 .welcome-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(var(--clr-hero-overlay), var(--clr-hero-overlay)),
     url("../images/hero-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
 }
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.35rem;
+  font-size: 0.85rem;
+  color: #dbe6ff;
+}
+
+.hero-subtitle {
+  color: #e0ecff;
+  font-weight: 300;
+}
+
 .welcome-page h1 {
-  color: white;
-  font-size: 4rem;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 5vw, 4rem);
 }
-.welcome-page h2 {
-  color: white;
-  font-size: 3rem;
+
+.welcome-page h2,
+.typed-output {
+  color: #a8d0ff;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  min-height: 48px;
 }
+
+.hero-actions {
+  gap: 1rem;
+}
+
 .progress,
 .progress-stacked {
   --bs-progress-bg: rgba(13, 110, 253, 0.25);
 }
+
 .about-heading {
   position: relative;
 }
+
 .about-heading::before {
   content: "";
   width: 20%;
@@ -55,18 +157,30 @@
   top: 110%;
   left: 0;
 }
+
 .services-heading {
   position: relative;
 }
+
 .services-heading::before {
   content: "";
-  width: 10%;
+  width: 80px;
   height: 4px;
   background-color: #0078ff;
   position: absolute;
   top: 100%;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.service-card {
+  background-color: var(--clr-surface);
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8ff;
+  padding: 2rem 1.75rem;
+  height: 100%;
+}
+
 .service-icon {
   font-size: 3rem;
   padding: 1.25rem;
@@ -74,11 +188,13 @@
   border-radius: 50%;
   border: 8px solid #0078ff;
 }
+
 .services-page .container .inner:hover .service-icon {
   color: white;
   background-color: #0078ff;
   border: 8px solid #69a7ee;
 }
+
 .services-sect-bg {
   background-image: linear-gradient(
       rgba(28, 28, 255, 0.7),
@@ -90,36 +206,52 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .Portfolio-heading {
   position: relative;
 }
+
 .Portfolio-heading::before {
   content: "";
-  width: 10%;
+  width: 80px;
   height: 4px;
   background-color: #0078ff;
   position: absolute;
   top: 100%;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .Portfolio-page .portfolio-icon {
   font-size: 2rem;
   color: #0078ff;
   width: 2.3rem;
   height: 2.3rem;
 }
+
 .Portfolio-page .portfolio-icon:hover {
   cursor: pointer;
 }
+
 .Portfolio-page .container .portfolio-section img {
   transition: 0.9s;
 }
+
 .Portfolio-page .container .portfolio-section:hover img {
   scale: 1.2;
 }
+
 .Portfolio-page .container .portfolio-section .inner {
   overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--clr-surface);
 }
+
+.portfolio-meta {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+}
+
 .Portfolio-page .portfolio-sect-bg {
   background-image: linear-gradient(
       rgba(28, 28, 255, 0.7),
@@ -131,40 +263,82 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .Portfolio-page .portfolio-sect-bg .carousel-inner img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  display: block;
+  margin-inline: auto;
 }
+
 .carousel-indicators [data-bs-target] {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
 }
+
 .blog-heading {
   position: relative;
 }
+
 .blog-heading::before {
   content: "";
-  width: 10%;
+  width: 80px;
   height: 4px;
   background-color: #0078ff;
   position: absolute;
   top: 100%;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.blog-page .card {
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 35px rgba(14, 42, 71, 0.06);
+  height: 100%;
+}
+
+.blog-page .card-cover img {
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  height: 260px;
+  object-fit: cover;
+}
+
+.blog-page .card-body {
+  padding: 2rem;
+}
+
+.author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid #e7ecf5;
+  padding: 1rem 2rem;
+}
+
 .blog-page .card a {
   color: black;
   transition: 0.8s;
 }
+
 .blog-page .card a:hover {
   color: #0078ff;
 }
+
 .blog-page .card-img img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
+
 .my-badge {
   padding: 0.6rem 0.8rem;
   position: absolute;
@@ -172,6 +346,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .contact-page .container-fluid {
   background-image: linear-gradient(
       rgba(28, 28, 255, 0.7),
@@ -183,9 +358,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .contact-page .contact-heading {
   position: relative;
 }
+
 .contact-page .contact-heading::before {
   content: "";
   width: 20%;
@@ -195,6 +372,7 @@
   top: 110%;
   left: 0;
 }
+
 .contact-page .icons .my-icon {
   font-size: 1.4rem;
   padding: 0.5rem;
@@ -203,29 +381,98 @@
   border: 3px solid #0078ff;
   transition: 0.4s;
 }
+
 .contact-page .icons .my-icon:hover {
   background-color: #0078ff;
   border: 3px solid #69a7ee;
   cursor: pointer;
 }
-.contact-page button:hover{
+
+.contact-page button:hover {
   /* border: #b1cef098 3px solid; */
   box-shadow: #aacef8 3px 3px 3px 2px;
 }
-@media screen and (max-width:991px) {
-  .navbar-toggler-icon{
+
+.footer-bar {
+  background-color: var(--clr-primary);
+  color: #ffffff;
+}
+
+.footer-bar a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-toggler-icon {
     color: white;
   }
-  .navbar-nav{
+  .navbar-nav {
     background-color: white;
   }
-  .navbar-nav .nav-link{
-    color: black !important; 
+  .navbar-nav .nav-link {
+    color: black !important;
   }
-  .navbar-nav .nav-link:hover{
+  .navbar-nav .nav-link:hover {
     color: #0078ff !important;
   }
-  .navbar-nav .nav-link.active{
-    color:#0078ff !important;
+  .navbar-nav .nav-link.active {
+    color: #0078ff !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    padding-top: 4rem;
+  }
+  .services-page .service-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+  .welcome-page {
+    background-attachment: scroll;
+  }
+  .welcome-page h1 {
+    font-size: 2.5rem;
+  }
+  .welcome-page h2,
+  .typed-output {
+    font-size: 1.5rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .about-heading::before,
+  .contact-page .contact-heading::before {
+    width: 40%;
+  }
+  .Portfolio-page .portfolio-sect-bg,
+  .services-sect-bg,
+  .contact-page .container-fluid {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+  .service-icon {
+    font-size: 2.5rem;
+    margin: 0.75rem;
+  }
+  .stats-card {
+    padding: 1.5rem 1rem;
+  }
+  .contact-page button {
+    width: 100%;
+  }
+  .footer-bar .col-3 {
+    width: 90%;
   }
 }

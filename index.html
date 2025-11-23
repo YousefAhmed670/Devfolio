@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>DevFolio</title>
@@ -74,13 +80,22 @@
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
         data-bs-smooth-scroll="true" tabindex="0">
         <!-- welcome page -->
-        <div id="home" class="welcome-page min-vh-100 d-flex justify-content-center align-items-center flex-column">
-            <h1 class="text-center">I am Morgan Freeman</h1>
-            <h2 id="typed"></h2>
+        <div id="home" class="welcome-page min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="hero-content text-center px-3">
+                <span class="hero-eyebrow text-uppercase">Creative Portfolio</span>
+                <h1 class="fw-bold mt-3">I am Morgan Freeman</h1>
+                <h2 id="typed" class="typed-output"></h2>
+                <p class="hero-subtitle mt-3">I craft human-centered products, bold brand systems, and immersive
+                    digital experiences that scale across devices.</p>
+                <div class="hero-actions d-flex justify-content-center flex-wrap mt-4">
+                    <a href="#work" class="btn btn-primary btn-pill shadow-sm">View Portfolio</a>
+                    <a href="#contact" class="btn btn-outline-light btn-pill">Hire Me</a>
+                </div>
+            </div>
         </div>
         <!-- welcome page -->
         <!-- about page -->
-        <div id="about" class="about-page">
+        <div id="about" class="about-page section-padding">
             <div class="container my-5 border border-dark-subtle border-top-0 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <div class="row">
                     <div class="col-md-6">
@@ -149,15 +164,15 @@
         </div>
         <!-- about page -->
         <!-- Services page -->
-        <div id="services" class="services-page my-4 py-2">
+        <div id="services" class="services-page section-padding">
             <div class="container my-4 py-3">
-                <div class="services-heading text-center my-4 py-2">
+                <div class="services-heading section-heading text-center my-4 py-2">
                     <h2 class="fs-1 fw-bolder">SERVICES</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="row p-4">
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-regular fa-envelope service-icon"></i>
                             <h3>Web Design</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -166,7 +181,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-regular fa-rectangle-list service-icon"></i>
                             <h3>Web Development</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -175,7 +190,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-solid fa-signal service-icon"></i>
                             <h3>Photography</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -184,7 +199,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-solid fa-binoculars service-icon"></i>
                             <h3>Responsive Design</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -193,7 +208,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-regular fa-sun service-icon"></i>
                             <h3>Graphic Design</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -202,7 +217,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="inner text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="inner service-card text-center shadow-hover mb-5">
                             <i class="fa-solid fa-calendar-days service-icon"></i>
                             <h3>Marketing Services</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem
@@ -214,31 +229,31 @@
             </div>
             <div class="container-fluid services-sect-bg ">
                 <div class="row p-5 ">
-                    <div class="col-md-3 p-2">
-                        <div class="inner text-center text-white py-3 my-3">
+                    <div class="col-sm-6 col-lg-3 p-2">
+                        <div class="inner text-center text-white my-3 stats-card shadow-hover">
                             <i class="fa-solid fa-check fs-3 p-4 border border-5 rounded-circle m-3"></i>
-                            <p class="fs-3">450</p>
+                            <p class="stats-value mb-1">450</p>
                             <p>WORKS COMPLETED</p>
                         </div>
                     </div>
-                    <div class="col-md-3 p-2">
-                        <div class="inner text-center text-white py-3 my-3">
+                    <div class="col-sm-6 col-lg-3 p-2">
+                        <div class="inner text-center text-white my-3 stats-card shadow-hover">
                             <i class="fa-regular fa-clipboard fs-3 p-4 border border-5 rounded-circle m-3"></i>
-                            <p class="fs-3">25</p>
+                            <p class="stats-value mb-1">25</p>
                             <p>YEARS OF EXPERIENCE</p>
                         </div>
                     </div>
-                    <div class="col-md-3 p-2">
-                        <div class="inner text-center text-white py-3 my-3">
+                    <div class="col-sm-6 col-lg-3 p-2">
+                        <div class="inner text-center text-white my-3 stats-card shadow-hover">
                             <i class="fa-solid fa-user-group fs-3 p-4 border border-5 rounded-circle m-3"></i>
-                            <p class="fs-3">550</p>
+                            <p class="stats-value mb-1">550</p>
                             <p>TOTAL CLIENTS</p>
                         </div>
                     </div>
-                    <div class="col-md-3 p-2">
-                        <div class="inner text-center text-white py-3 my-3">
+                    <div class="col-sm-6 col-lg-3 p-2">
+                        <div class="inner text-center text-white my-3 stats-card shadow-hover">
                             <i class="fa-solid fa-certificate fs-3 p-4 border border-5 rounded-circle m-3"></i>
-                            <p class="fs-3">48</p>
+                            <p class="stats-value mb-1">48</p>
                             <p>AWARD WON</p>
                         </div>
                     </div>
@@ -247,9 +262,9 @@
         </div>
         <!-- Services page -->
         <!-- Portfolio page -->
-        <div id="work" class="Portfolio-page my-4 py-2">
+        <div id="work" class="Portfolio-page section-padding">
             <div class="container my-4 py-3">
-                <div class="Portfolio-heading text-center my-4 py-2">
+                <div class="Portfolio-heading section-heading text-center my-4 py-2">
                     <h2 class="fs-1 fw-bolder">PORTFOLIO</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -261,7 +276,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Lorem impsum dolor</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2018</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -289,7 +305,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Loreda Cuno Nere</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2018</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -317,7 +334,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Mavrito Lana Dere</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2018</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -345,7 +363,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Bindo Laro Cado</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2018</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -373,7 +392,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Studio Lena Mado</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2018</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2018</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -401,7 +421,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <p class="fs-5 pt-4">Studio Big Bang</p>
-                                    <p><span class="text-primary">Web Design</span> / 18 Sep. 2017</p>
+                                    <p class="portfolio-meta mb-0"><span class="text-primary">Web Design</span> / 18
+                                        Sep. 2017</p>
                                 </div>
                                 <i
                                     class="fa-solid fa-plus portfolio-icon border border-3 border-primary rounded-circle "></i>
@@ -454,17 +475,19 @@
         </div>
         <!-- Portfolio page -->
         <!-- Blog page -->
-        <div id="blog" class="blog-page my-4 py-2">
+        <div id="blog" class="blog-page section-padding">
             <div class="container my-4 py-3">
-                <div class="blog-heading text-center my-4 py-2">
+                <div class="blog-heading section-heading text-center my-4 py-2">
                     <h2 class="fs-1 fw-bolder">BLOG</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="row p-2">
                     <div class="col-md-4 p-3 my-4">
-                        <div class="inner">
-                            <div class="card">
-                                <img src="images/post-1.jpg" class="card-img-top" alt="post-1">
+                        <div class="inner h-100">
+                            <div class="card shadow-hover h-100">
+                                <div class="card-cover">
+                                    <img src="images/post-1.jpg" class="card-img-top" alt="post-1">
+                                </div>
                                 <div class="card-body position-relative">
                                     <div class="badge text-bg-primary my-badge">Travel</div>
                                     <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
@@ -476,23 +499,25 @@
                                         dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
                                     </p>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <div class="card-img w-75">
-                                            <img src="images/testimonial-2.jpg" alt="person1">
-                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
-                                        </div>
-                                        <div class="d-flex align-items-center w-25">
-                                            <i class="fa-regular fa-clock"></i> 10 min
-                                        </div>
-                                    </li>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="images/testimonial-2.jpg" alt="person1" class="author-avatar">
+                                        <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                    </div>
+                                    <div class="d-flex align-items-center text-secondary gap-2">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>10 min</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 p-3 my-4">
-                        <div class="inner">
-                            <div class="card">
-                                <img src="images/post-2.jpg" class="card-img-top" alt="post-2">
+                        <div class="inner h-100">
+                            <div class="card shadow-hover h-100">
+                                <div class="card-cover">
+                                    <img src="images/post-2.jpg" class="card-img-top" alt="post-2">
+                                </div>
                                 <div class="card-body position-relative">
                                     <div class="badge text-bg-primary my-badge">Web Design</div>
                                     <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
@@ -504,23 +529,25 @@
                                         dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
                                     </p>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <div class="card-img w-75">
-                                            <img src="images/testimonial-2.jpg" alt="person1">
-                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
-                                        </div>
-                                        <div class="d-flex align-items-center w-25">
-                                            <i class="fa-regular fa-clock"></i> 10 min
-                                        </div>
-                                    </li>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="images/testimonial-2.jpg" alt="person1" class="author-avatar">
+                                        <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                    </div>
+                                    <div class="d-flex align-items-center text-secondary gap-2">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>10 min</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 p-3 my-4">
-                        <div class="inner">
-                            <div class="card">
-                                <img src="images/post-3.jpg" class="card-img-top" alt="post-3">
+                        <div class="inner h-100">
+                            <div class="card shadow-hover h-100">
+                                <div class="card-cover">
+                                    <img src="images/post-3.jpg" class="card-img-top" alt="post-3">
+                                </div>
                                 <div class="card-body position-relative">
                                     <div class="badge text-bg-primary my-badge">Web Design</div>
                                     <h5 class="card-title py-2"><a href="" class="text-decoration-none">See more ideas
@@ -532,16 +559,16 @@
                                         dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
                                     </p>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <div class="card-img w-75">
-                                            <img src="images/testimonial-2.jpg" alt="person1">
-                                            <a href="" class="text-decoration-none">Morgan Freeman</a>
-                                        </div>
-                                        <div class="d-flex align-items-center w-25">
-                                            <i class="fa-regular fa-clock"></i> 10 min
-                                        </div>
-                                    </li>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="images/testimonial-2.jpg" alt="person1" class="author-avatar">
+                                        <a href="" class="text-decoration-none">Morgan Freeman</a>
+                                    </div>
+                                    <div class="d-flex align-items-center text-secondary gap-2">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>10 min</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -551,7 +578,7 @@
         </div>
         <!-- Blog page -->
         <!-- contact page -->
-        <div id="contact" class="contact-page">
+        <div id="contact" class="contact-page section-padding">
             <div class="container-fluid py-5">
                 <div class="container py-5">
                     <div class="row bg-body py-3 my-5">
@@ -566,9 +593,9 @@
                                     <input type="text" class="form-control py-2 my-3" placeholder="Subject"
                                         name="Subject" required>
                                     <textarea name="message" class="form-control py-4 my-3 h-100" id=""
-                                        placeholder="message" name="message" required></textarea>
-                                    <button type="button submit"
-                                        class="btn btn-primary d-block col-3 mx-auto my-4 rounded-pill py-2">Send
+                                        placeholder="message" required></textarea>
+                                    <button type="submit"
+                                        class="btn btn-primary btn-pill d-block col-md-6 col-lg-4 mx-auto my-4 py-2">Send
                                         Message</button>
                                 </form>
                             </div>
@@ -601,15 +628,14 @@
             </div>
         </div>
         <!-- contact page -->
-        <div class="container-fluid bg-primary py-4">
+        <div class="container-fluid bg-primary footer-bar py-4">
             <div class="row">
                 <div class="col-3 mx-auto text-white text-center">
-                    © Copyright DevFolio. All Rights Reserved Designed by <a href=""
+                    &copy; Copyright DevFolio. All Rights Reserved Designed by <a href=""
                         class="text-white text-decoration-none">BootstrapMade</a>
                 </div>
             </div>
         </div>
-
 
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
